@@ -5,12 +5,14 @@ namespace BurgerKiosk
         public Form1()
         {
             InitializeComponent();
+            this.AcceptButton = btnOrder;
         }
         private void Form1_Shown(object sender, EventArgs e)
         {
             rdoHamBurger.Checked = false;
             rdoBulgogiBurger.Checked = false;
             rdoChickenBurger.Checked = false;
+            rdoHamBurger.TabStop = true;
         }
 
         int totalCost = 0;
@@ -76,6 +78,7 @@ namespace BurgerKiosk
             lstOrder.Items.Clear();
             totalCost = 0;
             lblTotalCost.Text = "총 금액: 0원";
+            rdoHamBurger.TabStop = true;
         }
     }
 }
