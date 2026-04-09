@@ -25,6 +25,29 @@ namespace BurgerKiosk
                 return;
             }
 
+        }
+
+        private void btnInit_Click(object sender, EventArgs e)
+        {
+            rdoHamBurger.Checked = false;
+            rdoBulgogiBurger.Checked = false;
+            rdoChickenBurger.Checked = false;
+
+            chkPotato.Checked = false;
+            chkCola.Checked = false;
+            chkCheese.Checked = false;
+            chkSauce.Checked = false;
+
+            lstOrder.Items.Clear();
+            totalCost = 0;
+            lblTotalCost.Text = "총 금액: 0원";
+            rdoHamBurger.TabStop = true;
+        }
+
+        private void chkPotato_CheckedChanged(object sender, EventArgs e)
+        {
+            lstOrder.Items.Clear();
+            totalCost = 0;
             if (rdoHamBurger.Checked)
             {
                 totalCost += 5000;
@@ -62,23 +85,6 @@ namespace BurgerKiosk
             }
 
             lblTotalCost.Text = "총 금액: " + totalCost.ToString("N0") + "원";
-        }
-
-        private void btnInit_Click(object sender, EventArgs e)
-        {
-            rdoHamBurger.Checked = false;
-            rdoBulgogiBurger.Checked = false;
-            rdoChickenBurger.Checked = false;
-
-            chkPotato.Checked = false;
-            chkCola.Checked = false;
-            chkCheese.Checked = false;
-            chkSauce.Checked = false;
-
-            lstOrder.Items.Clear();
-            totalCost = 0;
-            lblTotalCost.Text = "총 금액: 0원";
-            rdoHamBurger.TabStop = true;
         }
     }
 }

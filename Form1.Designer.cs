@@ -78,6 +78,7 @@
             rdoHamBurger.TabStop = true;
             rdoHamBurger.Text = "햄버거";
             rdoHamBurger.UseVisualStyleBackColor = true;
+            rdoHamBurger.CheckedChanged += chkPotato_CheckedChanged;
             // 
             // rdoBulgogiBurger
             // 
@@ -90,6 +91,7 @@
             rdoBulgogiBurger.TabIndex = 1;
             rdoBulgogiBurger.Text = "불고기버거";
             rdoBulgogiBurger.UseVisualStyleBackColor = true;
+            rdoBulgogiBurger.CheckedChanged += chkPotato_CheckedChanged;
             // 
             // rdoChickenBurger
             // 
@@ -102,6 +104,7 @@
             rdoChickenBurger.TabIndex = 2;
             rdoChickenBurger.Text = "치킨버거";
             rdoChickenBurger.UseVisualStyleBackColor = true;
+            rdoChickenBurger.CheckedChanged += chkPotato_CheckedChanged;
             // 
             // picHamBurger
             // 
@@ -144,6 +147,7 @@
             chkPotato.TabIndex = 0;
             chkPotato.Text = "감자튀김";
             chkPotato.UseVisualStyleBackColor = true;
+            chkPotato.CheckedChanged += chkPotato_CheckedChanged;
             // 
             // chkCola
             // 
@@ -156,6 +160,7 @@
             chkCola.TabIndex = 1;
             chkCola.Text = "콜라";
             chkCola.UseVisualStyleBackColor = true;
+            chkCola.CheckedChanged += chkPotato_CheckedChanged;
             // 
             // chkCheese
             // 
@@ -168,6 +173,7 @@
             chkCheese.TabIndex = 2;
             chkCheese.Text = "치즈 추가";
             chkCheese.UseVisualStyleBackColor = true;
+            chkCheese.CheckedChanged += chkPotato_CheckedChanged;
             // 
             // chkSauce
             // 
@@ -180,6 +186,7 @@
             chkSauce.TabIndex = 3;
             chkSauce.Text = "소스 추가";
             chkSauce.UseVisualStyleBackColor = true;
+            chkSauce.CheckedChanged += chkPotato_CheckedChanged;
             // 
             // grpMenu
             // 
@@ -282,7 +289,7 @@
             Controls.Add(lblAppName);
             Controls.Add(grpMenu);
             Name = "Form1";
-            Text = "1";
+            Text = "Burger Kiosk v1.0";
             Shown += Form1_Shown;
             ((System.ComponentModel.ISupportInitialize)picHamBurger).EndInit();
             ((System.ComponentModel.ISupportInitialize)picBulgogiBurger).EndInit();
